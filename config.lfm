@@ -1,0 +1,112 @@
+object frmconfig: Tfrmconfig
+  Left = 256
+  Height = 256
+  Top = 807
+  Width = 484
+  Caption = 'Configuração'
+  ClientHeight = 256
+  ClientWidth = 484
+  Position = poMainFormCenter
+  LCLVersion = '4.0.0.4'
+  OnCreate = FormCreate
+  object btGravar: TButton
+    Left = 344
+    Height = 33
+    Top = 192
+    Width = 96
+    Caption = 'Gravar'
+    TabOrder = 1
+    OnClick = btGravarClick
+  end
+  object btCancelar: TButton
+    Left = 232
+    Height = 33
+    Top = 192
+    Width = 96
+    Caption = 'Cancelar'
+    TabOrder = 0
+    OnClick = btCancelarClick
+  end
+  object GroupBox1: TGroupBox
+    Left = 8
+    Height = 161
+    Top = 7
+    Width = 432
+    Caption = 'Watchdog'
+    ClientHeight = 141
+    ClientWidth = 428
+    TabOrder = 2
+    object Label1: TLabel
+      Left = 25
+      Height = 15
+      Top = 40
+      Width = 55
+      Caption = 'Aplicação:'
+    end
+    object edAplicacao: TEdit
+      Left = 25
+      Height = 23
+      Hint = 'O Nome do aplicativo que aparece no gerenciador de tarefas'
+      Top = 58
+      Width = 231
+      ParentShowHint = False
+      ShowHint = True
+      TabOrder = 0
+      TextHint = 'Nome do Gerenciador de tarefas'
+    end
+    object Label2: TLabel
+      Left = 24
+      Height = 15
+      Top = 90
+      Width = 52
+      Caption = 'Caminho:'
+    end
+    object edTime: TRxTimeEdit
+      Left = 264
+      Height = 23
+      Hint = 'Tempo entre verificações'
+      Top = 58
+      Width = 129
+      ShowSecond = True
+      MaxLength = 8
+      ParentShowHint = False
+      ShowHint = True
+      TabOrder = 1
+    end
+    object Label3: TLabel
+      Left = 267
+      Height = 15
+      Top = 40
+      Width = 149
+      Caption = 'Tempo Verificação (hh:mm):'
+    end
+    object edCaminho: TFileNameEdit
+      Left = 25
+      Height = 23
+      Hint = 'Local + executavel que será chamado'
+      Top = 106
+      Width = 391
+      DialogTitle = 'Selecione o executavel alvo'
+      FilterIndex = 0
+      HideDirectories = False
+      ButtonWidth = 23
+      NumGlyphs = 1
+      MaxLength = 0
+      ParentShowHint = False
+      ShowHint = True
+      TabOrder = 2
+      TextHint = 'Caminho do aplicativo'
+    end
+    object ckWatchdog: TCheckBox
+      Left = 26
+      Height = 19
+      Hint = 'Ativa ou desativa o serviço de watchdog'
+      Top = 8
+      Width = 49
+      Caption = 'Ativar'
+      ParentShowHint = False
+      ShowHint = True
+      TabOrder = 3
+    end
+  end
+end
